@@ -34,7 +34,7 @@ p,h1,dl {
 
 .head-container {
   width: 100%;
-  background-image: url("/img/sky.jpg");
+  background-image: url("sky.jpg");
   display: flex;
   justify-content: space-between;
   /* box-shadow:  1px 1.5px 1px 1px rgb(56, 184, 235); */
