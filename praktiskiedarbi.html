@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Blog, Traveling, Ceļošana, Blogs, Myfirstwebpage">
+    <meta name="author" content="Eriks Petenko">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Travel blog</title>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="head-container">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <div class="navbar-container">
+
+            <div class="social-media">
+
+                <ul>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                </ul>
+            </div>
+
+            <div class="language">
+                <button class="button-lang" onclick="myFunction()">LV</button>
+                <button class="button-lang" onclick="myFunction2()">ENG</button>
+                <script>
+                    function myFunction() {
+                        var txt;
+                        if (confirm("Valdoa nominīta uz latviešu")) {
+                            txt = "You pressed OK!";
+                        } else {
+                            txt = "You pressed Cancel!";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+
+                    function myFunction2() {
+                        var txt;
+                        if (confirm("Language changed to English")) {
+                            txt = "You pressed OK!";
+                        } else {
+                            txt = "You pressed Cancel!";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                </script>
+
+            </div>
+            <nav>
+                <ul>
+                    <li class="items"><a href="index.html">Galvenā lapa</a></li>
+                    <li class="items"><a href="praktiskiedarbi.html">Praktiskie darbi</a></li>
+                    <li class="items"><a href="blogs.html">Blogs</a></li>
+                    <li class="items"><a href="Kontakti.html">Kontakti</a></li>
+                    <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+            <script>
+                $(document).ready(function () {
+                    $('.btn').click(function () {
+                        $('.items').toggleClass("show");
+                        $('ul li').toggleClass("hide");
+                    });
+                });
+            </script>
+        </div>
+    </header>
+
+    <section class="praktiskie">
+
+
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "" || x == null) {
+                    alert("Name must be filled out");
+                }
+                else {
+                    alert('Paldies');
+                    return true;
+                }
+            }
+        </script>
+
+
+        <div class="mail">
+            <h2>Ievade ar IF</h2>
+            <form name="form1" action="#" onsubmit="required()">
+                <input type='text' name='text1' /></li>
+                <input type="submit" name="submit" value="Submit" /></li>
+            </form>
+        </div>
+        <script>
+            function required() {
+                var empt = document.forms["form1"]["text1"].value;
+                if (empt == "") {
+                    alert("Please input a Value");
+                    return false;
+                }
+                else {
+                    alert('Code has accepted : you can try another');
+                    return true;
+                }
+            }
+        </script>
+    </section>
+    <section>
+        <h2>Tabula</h2>
+        <div class="table">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Vārds</th>
+                        <th>Uzvārds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pirmais</td>
+                        <td>Pirmais</td>
+                    </tr>
+                    <tr>
+                        <td>Otrais</td>
+                        <td>Otrais</td>
+                    </tr>
+                    <!-- and so on... -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="footer-heading footer-1">
+                    <h2>Par blogu</h2>
+                    <a href="#">Blogs</a>
+                    <a href="#">Stāsts</a>
+                    <a href="#">Vairāk</a>
+                    <a href="#">Noteikumi</a>
+                </div>
+                <div class="footer-heading footer-2">
+                    <h2>Autora informācija</h2>
+                    <dt>Ēriks Petenko</dt>
+                    <dt>Rīga</dt>
+                    <dt>Mācību grupa GR13</dt>
+                </div>
+                <form action="" id="FormMessage" method="post">
+                    <div class="footer-email-form">
+                        <h2>Saņemiet mūsu jaunumus epastā:</h2>
+                        <input id="footer-email" type="email" placeholder="ievadi savu epastu..." required>
+                        <button id="footer-email-btn" type="submit">Apstiprināt</button>
+                        <p id="result"></p>
+                </form>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
